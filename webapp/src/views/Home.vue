@@ -1,18 +1,24 @@
 <template>
     <Card>
-        <Form :model="formItem">
-            <FormItem label="Input" :label-width="80">
-                <Input v-model="formItem.input" placeholder="Enter something..." />
+        <Form>
+            <FormItem label="">
+                <Button type="primary" v-on:click="linkTo('device')" style="width: 100%">添加挖掘机</Button>
             </FormItem>
-            <FormItem label="Select" :label-width="80">
-                <Select v-model="formItem.select">
-                    <Option value="beijing">New York</Option>
-                    <Option value="shanghai">London</Option>
-                    <Option value="shenzhen">Sydney</Option>
-                </Select>
+
+            <FormItem label="">
+                <Button type="primary" v-on:click="linkTo('model')" style="width: 100%">添加型号</Button>
             </FormItem>
-            <FormItem :label-width="0">
-                <Button type="primary" v-on:click="onSave">保存</Button>
+
+            <FormItem label="">
+                <Button type="primary" v-on:click="linkTo('driver')" style="width: 100%">添加司机</Button>
+            </FormItem>
+
+            <FormItem label="">
+                <Button type="primary" v-on:click="linkTo('record')" style="width: 100%">挖掘机出勤记录</Button>
+            </FormItem>
+           
+            <FormItem>
+                <Button type="primary" v-on:click="linkTo('maintain')" style="width: 100%">挖掘机保养记录</Button>
             </FormItem>
         </Form>
     </Card>
@@ -20,17 +26,9 @@
 <script>
 export default {
     name: 'home',
-    data() {
-        return {
-            formItem: {
-                input: "",
-                select: "",
-            }
-        }
-    },
     methods: {
-        onSave() {
-            this.$Message.error('This is a info tip');
+        onSave(name) {
+           this.$router.push(name);
         }
     }
 }
