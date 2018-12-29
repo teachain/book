@@ -13,29 +13,39 @@ export default new Router({
     component: () =>
       import ('./views/Home.vue')
   }, {
-    path: '/about',
-    name: 'about',
-    component: () =>
-      import ('./views/About.vue')
-  }, {
     path: '/device/add',
     name: 'device',
     component: () =>
-      import ('./views/Device.vue')
+      import ('./views/AddDevice.vue')
   }, {
     path: '/driver/add',
     name: 'driver',
     component: () =>
-      import ('./views/Driver.vue')
+      import ('./views/AddDriver.vue')
   }, {
     path: '/model/add',
     name: 'modelAdd',
     component: () =>
-      import ('./views/Model.vue')
+      import ('./views/AddModel.vue')
   }, {
-    path: '/record',
+    path: '/record/add',
     name: 'record',
     component: () =>
-      import ('./views/Record.vue')
+      import ('./views/AddRecord.vue')
+  }, {
+    path: '/record/list',
+    name: 'record',
+    component: () =>
+      import ('./views/ListRecord.vue')
+  }, {
+    path: '/maintain/add',
+    name: 'maintainadd',
+    component: () =>
+      import ('./views/AddMaintain.vue')
+  }, {
+    path: '/maintain/list',
+    name: 'maintainlist',
+    component: () =>
+      import ('./views/ListMaintain.vue')
   }]
 })
