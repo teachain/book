@@ -18,21 +18,21 @@ export default new Router({
     component: () =>
       import ('./views/About.vue')
   }, {
-    path: '/device',
+    path: '/device/add',
     name: 'device',
     component: () =>
       import ('./views/Device.vue')
   }, {
-    path: '/driver',
+    path: '/driver/add',
     name: 'driver',
     component: () =>
       import ('./views/Driver.vue')
   }, {
-    path: '/model',
-    name: 'model',
+    path: '/model/add',
+    name: 'modelAdd',
     component: () =>
       import ('./views/Model.vue')
-  },{
+  }, {
     path: '/record',
     name: 'record',
     component: () =>

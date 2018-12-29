@@ -1,5 +1,5 @@
 <template>
-    <Card>
+    <Card style="height: 98%">
         <Form :model="formItem">
             <FormItem label="挖掘机型号" :label-width="80">
                 <Input v-model="formItem.name" placeholder="请输入挖掘机型号..." />
@@ -12,7 +12,7 @@
 </template>
 <script>
 export default {
-    name: 'home',
+    name: 'model',
     data() {
         return {
             formItem: {
@@ -26,10 +26,14 @@ export default {
                 this.$Message.error('挖掘机型号不能为空');
                 return;
             }
-            this.$http.post('/model/add',{name:this.formItem.name}).then(()=>{
-                 
+            this.$http.post('/model/add',{name:this.formItem.name}).then((data)=>{
+                 if (data.data.code == 0) {
+                    this.$Message.success("挖掘机型号保存成功");
+                    this.$router.push({ path: "/" });
+                } else {
+                    this.$Message.error("挖掘机型号保存失败");
+                }
             });
-            
         }
     }
 }
