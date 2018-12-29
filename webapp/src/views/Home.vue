@@ -31,7 +31,6 @@
 </template>
 <script>
 export default {
-    name: 'home',
     methods: {
         linkTo(name) {
            this.$router.push({path:name});

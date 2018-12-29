@@ -36,7 +36,6 @@
 </template>
 <script>
 export default {
-    name: 'record',
     data() {
         return {
             formItem: {

@@ -15,7 +15,6 @@
 </template>
 <script>
 export default {
-    name: 'driver',
     data() {
         return {
             formItem: {
