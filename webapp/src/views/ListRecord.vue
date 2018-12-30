@@ -1,33 +1,44 @@
 <template>
     <div>
-        <Card>
+        <Card v-for="item in records" :value="item.id" :key="item.id" style="margin-top: 10px;margin-left: 5px;margin-right: 5px">
             <Form>
-                <FormItem label="名称" :label-width="80">
+                <FormItem label="挖掘机" :label-width="80">
+                    {{item.device_name}}
                 </FormItem>
-                <FormItem label="型号" :label-width="80">
+                <FormItem label="司机" :label-width="80">
+                    {{item.driver_name}}
                 </FormItem>
-                <FormItem label="" :label-width="80">
+                <FormItem label="客户" :label-width="80">
+                    {{item.customer}}
                 </FormItem>
-                <FormItem label="" :label-width="80">
+                <FormItem label="地点" :label-width="80">
+                    {{item.workplace}}
                 </FormItem>
-                <FormItem label="" :label-width="80">
+                <FormItem label="备注" :label-width="80">
+                    {{item.remarks}}
                 </FormItem>
-                <FormItem label="" :label-width="80">
+                <FormItem label="开始时间" :label-width="80">
+                    {{item.start_time | dateFormat}}
                 </FormItem>
-                <FormItem label="" :label-width="80">
-                </FormItem>
-                <FormItem :label-width="0">
+                <FormItem label="结束时间" :label-width="80">
+                    {{item.end_time | dateFormat}}
                 </FormItem>
             </Form>
         </Card>
-        <Button type="primary" v-on:click="goBack()">返回</Button>
+        <Button type="primary" v-on:click="goBack()" style="margin-top: 10px">返回</Button>
     </div>
 </template>
 <script>
+import moment from "moment"
 export default {
     data() {
         return {
             records: [],
+        }
+    },
+    filters: {
+        dateFormat(val) {
+            return moment(val).format('YYYY-MM-DD HH:mm');
         }
     },
     created() {
@@ -40,5 +51,6 @@ export default {
             this.$router.push({ path: "/" });
         }
     }
+
 }
 </script>
