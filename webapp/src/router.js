@@ -47,5 +47,15 @@ export default new Router({
     name: 'maintainlist',
     component: () =>
       import ('./views/ListMaintain.vue')
+  }, {
+    path: '/gas/add',
+    name: 'gasadd',
+    component: () =>
+      import ('./views/AddGas.vue')
+  }, {
+    path: '/gas/list',
+    name: 'gaslist',
+    component: () =>
+      import ('./views/ListGas.vue')
   }]
 })

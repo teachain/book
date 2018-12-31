@@ -1,5 +1,8 @@
 <template>
     <div>
+        <Card v-if="records.length==0">
+             当前还没有挖掘机的出勤记录
+        </Card>
         <Card v-for="item in records" :value="item.id" :key="item.id" style="margin-top: 10px;margin-left: 5px;margin-right: 5px">
             <Form>
                 <FormItem label="挖掘机" :label-width="80">

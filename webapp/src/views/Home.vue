@@ -26,6 +26,12 @@
                         <FormItem>
                 <Button type="primary" v-on:click="linkTo('/maintain/list')" style="width: 100%">查看挖掘机保养记录</Button>
             </FormItem>
+             <FormItem>
+                <Button type="primary" v-on:click="linkTo('/gas/add')" style="width: 100%">添加加油记录</Button>
+            </FormItem>
+             <FormItem>
+                <Button type="primary" v-on:click="linkTo('/gas/list')" style="width: 100%">查看加油记录</Button>
+            </FormItem>
         </Form>
     </Card>
 </template>
