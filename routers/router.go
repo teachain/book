@@ -21,4 +21,7 @@ func init() {
 	beego.Router("/gas/add", &controllers.GasController{}, "post:Add")
 	beego.Router("/gas/list", &controllers.GasController{}, "get:ListAll")
 
+	beego.Router("/maintain/add", &controllers.MaintainController{}, "post:Add")
+	beego.Router("/maintain/list", &controllers.MaintainController{}, "get:ListAll")
+
 }
