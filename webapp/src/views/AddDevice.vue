@@ -1,10 +1,10 @@
 <template>
     <Card>
         <Form :model="formItem">
-            <FormItem label="挖掘机名称" :label-width="80">
+            <FormItem label="挖掘机名称" :label-width="80" label-position="top">
                 <Input v-model="formItem.name" placeholder="请输入挖掘机名称..." />
             </FormItem>
-            <FormItem label="挖掘机型号" :label-width="80">
+            <FormItem label="挖掘机型号" :label-width="80" label-position="top">
                 <Select v-model="formItem.model_id">
                     <Option v-for="item in models" :value="item.id" :key="item.id">{{ item.name }}</Option>
                 </Select>

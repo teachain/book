@@ -1,22 +1,22 @@
 <template>
     <Card>
         <Form>
-            <FormItem label="挖掘机" :label-width="80">
+            <FormItem label="挖掘机" :label-width="80" label-position="top">
                 <Select v-model="formItem.device_id">
                     <Option v-for="item in devices" :value="item.id" :key="item.id">{{ item.name }}</Option>
                 </Select>
             </FormItem>
-             <FormItem label="油量(升)" :label-width="80">
+             <FormItem label="油量(升)" :label-width="80" label-position="top">
                 <InputNumber v-model="formItem.amount" style="width: 100%"></InputNumber>
             </FormItem>
-             <FormItem label="油价(元/升)" :label-width="80">
+             <FormItem label="油价(元/升)" :label-width="80" label-position="top">
                 <InputNumber v-model="formItem.price" style="width: 100%"></InputNumber>
             </FormItem>
-            <FormItem label="总价（元）" :label-width="80">
+            <FormItem label="总价（元）" :label-width="80" label-position="top">
                 <InputNumber v-model="formItem.total_price" style="width: 100%"></InputNumber>
             </FormItem>
 
-            <FormItem label="日期时间" :label-width="80">
+            <FormItem label="日期时间" :label-width="80" label-position="top">
                  <DatePicker v-model="formItem.create_time" type="datetime" format="yyyy-MM-dd HH:mm" placeholder="选择开始日期和时间" style="width: 100%"></DatePicker>
             </FormItem>
 

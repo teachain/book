@@ -1,31 +1,31 @@
 <template>
     <Card>
         <Form>
-            <FormItem label="挖掘机" :label-width="80">
+            <FormItem label="挖掘机" :label-width="80" label-position="top">
                 <Select v-model="formItem.device_id">
                     <Option v-for="item in devices" :value="item.id" :key="item.id">{{ item.name }}</Option>
                 </Select>
             </FormItem>
-            <FormItem label="司机" :label-width="80">
+            <FormItem label="司机" :label-width="80" label-position="top">
                 <Select v-model="formItem.driver_id">
                     <Option v-for="item in drivers" :value="item.id" :key="item.id">{{ item.name }}</Option>
                 </Select>
             </FormItem>
-             <FormItem label="客户" :label-width="80">
+             <FormItem label="客户" :label-width="80" label-position="top">
                 <Input v-model="formItem.customer" placeholder="请输入客户名称..." />
             </FormItem>
-             <FormItem label="地点" :label-width="80">
+             <FormItem label="地点" :label-width="80" label-position="top">
                 <Input v-model="formItem.workplace" placeholder="请输入工作地点..." type="textarea" :rows="2"/>
             </FormItem>
-             <FormItem label="备注" :label-width="80">
+             <FormItem label="备注" :label-width="80" label-position="top">
                 <Input v-model="formItem.remarks" placeholder="请输入备注..." type="textarea" :rows="2"/>
             </FormItem>
 
-            <FormItem label="开始时间" :label-width="80">
+            <FormItem label="开始时间" :label-width="80" label-position="top">
                  <DatePicker v-model="formItem.start_time" type="datetime" format="yyyy-MM-dd HH:mm" placeholder="选择开始日期和时间" style="width: 100%"></DatePicker>
             </FormItem>
 
-            <FormItem label="结束时间" :label-width="80">
+            <FormItem label="结束时间" :label-width="80" label-position="top">
                 <DatePicker v-model="formItem.end_time"  type="datetime" format="yyyy-MM-dd HH:mm" placeholder="选择结束日期和时间" style="width: 100%"></DatePicker>
             </FormItem>
             <FormItem :label-width="0">

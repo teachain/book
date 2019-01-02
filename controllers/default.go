@@ -8,6 +8,7 @@ type MainController struct {
 	beego.Controller
 }
 
-func (c *MainController) Get() {
-
+func (this *MainController) Get() {
+	this.TplName = "index.html"
+	this.Render()
 }

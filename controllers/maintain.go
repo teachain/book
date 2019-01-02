@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"book/models"
 	"encoding/json"
+	"book/models"
 )
 
 type MaintainController struct {

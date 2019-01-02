@@ -1,12 +1,12 @@
 package controllers
 
 import (
-	"book/models"
 	"encoding/json"
+	"book/models"
 )
 
-type  DeviceController struct {
-BaseController
+type DeviceController struct {
+	BaseController
 }
 
 func (this *DeviceController) Add() {
@@ -16,7 +16,7 @@ func (this *DeviceController) Add() {
 		this.EchoError(err.Error())
 		return
 	}
-	err=models.AddDevice(&params)
+	err = models.AddDevice(&params)
 	if err != nil {
 		this.EchoError(err.Error())
 		return
@@ -25,10 +25,10 @@ func (this *DeviceController) Add() {
 }
 
 func (this *DeviceController) ListAll() {
-   all,err:=models.GetAllDevices()
-   if err!=nil{
-	   this.EchoError(err.Error())
-	   return
-   }
-   this.Echo(all)
+	all, err := models.GetAllDevices()
+	if err != nil {
+		this.EchoError(err.Error())
+		return
+	}
+	this.Echo(all)
 }

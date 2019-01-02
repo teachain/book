@@ -1,13 +1,13 @@
 <template>
     <Card>
         <Form>
-            <FormItem label="挖掘机" :label-width="80">
+            <FormItem label="挖掘机" :label-width="80" label-position="top">
                 <Select v-model="formItem.device_id">
                     <Option v-for="item in devices" :value="item.id" :key="item.id">{{ item.name }}</Option>
                 </Select>
             </FormItem>
 
-            <FormItem label="时间" :label-width="80">
+            <FormItem label="时间" :label-width="80" label-position="top">
                  <DatePicker v-model="formItem.create_time" type="datetime" format="yyyy-MM-dd HH:mm" placeholder="选择开始日期和时间" style="width: 100%"></DatePicker>
             </FormItem>
             <FormItem :label-width="0">

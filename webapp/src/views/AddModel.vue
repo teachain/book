@@ -1,7 +1,7 @@
 <template>
     <Card style="height: 98%">
         <Form :model="formItem">
-            <FormItem label="挖掘机型号" :label-width="80">
+            <FormItem label="挖掘机型号" :label-width="80" label-position="top">
                 <Input v-model="formItem.name" placeholder="请输入挖掘机型号..." />
             </FormItem>
             <FormItem :label-width="0">

@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"book/models"
 	"encoding/json"
+	"book/models"
 )
 
 type RecordController struct {
@@ -16,7 +16,7 @@ func (this *RecordController) Add() {
 		this.EchoError(err.Error())
 		return
 	}
-	err=models.AddRecord(&params)
+	err = models.AddRecord(&params)
 	if err != nil {
 		this.EchoError(err.Error())
 		return
@@ -25,11 +25,10 @@ func (this *RecordController) Add() {
 }
 
 func (this *RecordController) ListAll() {
-	all,err:=models.GetAllRecords()
-	if err!=nil{
+	all, err := models.GetAllRecords()
+	if err != nil {
 		this.EchoError(err.Error())
 		return
 	}
 	this.Echo(all)
 }
-

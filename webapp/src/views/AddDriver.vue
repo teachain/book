@@ -1,10 +1,10 @@
 <template>
     <Card style="height: 98%">
         <Form :model="formItem">
-            <FormItem label="司机名字" :label-width="80">
+            <FormItem label="司机名字" :label-width="80" label-position="top">
                 <Input v-model="formItem.name" placeholder="请输入司机名字..." />
             </FormItem>
-            <FormItem label="手机号码" :label-width="80">
+            <FormItem label="手机号码" :label-width="80" label-position="top">
                 <Input v-model="formItem.telephone" placeholder="请输入手机号码..." />
             </FormItem>
             <FormItem :label-width="0">

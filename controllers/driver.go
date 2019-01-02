@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"book/models"
 	"encoding/json"
+	"book/models"
 )
 
 type DriverController struct {
@@ -16,7 +16,7 @@ func (this *DriverController) Add() {
 		this.EchoError(err.Error())
 		return
 	}
-	err=models.AddDriver(&params)
+	err = models.AddDriver(&params)
 	if err != nil {
 		this.EchoError(err.Error())
 		return
@@ -25,8 +25,8 @@ func (this *DriverController) Add() {
 }
 
 func (this *DriverController) ListAll() {
-	all,err:=models.GetAllDrivers()
-	if err!=nil{
+	all, err := models.GetAllDrivers()
+	if err != nil {
 		this.EchoError(err.Error())
 		return
 	}

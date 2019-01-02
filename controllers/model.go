@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"book/models"
 	"encoding/json"
+	"book/models"
 )
 
 type ModelController struct {
@@ -16,7 +16,7 @@ func (this *ModelController) Add() {
 		this.EchoError(err.Error())
 		return
 	}
-	err=models.AddModel(&params)
+	err = models.AddModel(&params)
 	if err != nil {
 		this.EchoError(err.Error())
 		return
@@ -25,8 +25,8 @@ func (this *ModelController) Add() {
 }
 
 func (this *ModelController) ListAll() {
-	all,err:=models.GetAllModels()
-	if err!=nil{
+	all, err := models.GetAllModels()
+	if err != nil {
 		this.EchoError(err.Error())
 		return
 	}
